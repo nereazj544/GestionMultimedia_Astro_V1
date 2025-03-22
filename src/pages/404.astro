@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="404">
+    <Header />
+    <!-- ! NO FORMATEAR ESTILO SINO SHAWN QUEDA ENCIMA, QUIERO QUE QUEDE AL LADO CONTRARIO AL QUE ESTABA (VAMOS EN EL LADO IZQUIERDO(CREO)) -->
+
+    <div class="error">
+        <h1>ERROR</h1>
+        <h2>PAGINA NO ENCONTRADA</h2>
+        <p>No pudimos encontrar lo que buscas. Verifica que la URL sea correcta.</p>
+    </div>
+    <table align="center">
+        <tr>
+            <td align="center">
+                <img src="https://i.pinimg.com/736x/e0/0c/62/e00c628d83109a800c86a3725cf6a295.jpg" alt="error" srcset="">
+            </td>
+            <br>
+            <td class="botonInicio">
+                <div class="font1">¡Has roto la pagina!</div>
+                <a href="/"> 
+                    <span>IR AL INICIO</span>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <Footer />
+</Layout>
+
+
+<style>
+    .error {
+    text-align: center;
+    margin-bottom: 0.75rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+}
+
+.error h1 {
+    color: rgb(220, 38, 38);
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.error h2 {
+    color: black;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.error p {
+    color: black;
+    margin-bottom: 1.75rem;
+}
+
+/* Estilos de tabla */
+table {
+    margin: auto;
+    border: none;
+    padding: auto 7rem;
+}
+
+td {
+    padding: 0.5rem;
+    vertical-align: middle;
+}
+
+img {
+    width: 30em;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para el botón */
+.botonInicio a {
+    display: inline-block;
+    transform: skewX(-21deg);
+    cursor: pointer;
+    border: 2px solid;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.625rem 1.25rem;
+    margin-top: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.botonInicio a:hover {
+    /* transform: scale(1.1); */
+    color: #0B4359;
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+.font1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-top: 0.75rem;
+}
+</style>
