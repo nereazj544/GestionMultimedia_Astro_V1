@@ -32,22 +32,25 @@ const elementoAleatorio = arrayImagenes[indiceImagenes];
 </div>
 
 <div class="centro">
-	<img src="" alt="" />
-
-	<div class="container">
+	<div class="nov-container">
 		<img
 			class="img1"
 			src={elementoAleatorio.imagen}
 			alt={elementoAleatorio.texto}
 		/>
-
-		<p class="nov">Descubre las nuevas novedades de: 
-			<span>{pbAleatorio}</span>
-		</p>
-		<p class="nov">
-			Se acabo tener que tener cincuenta cosas donde registrar nuestro
-			contenido multimedia.
-		</p>
+		<div class="textoNov">
+			<p class="novale">
+				Descubre las nuevas novedades de:
+				<span>{pbAleatorio}</span>
+			</p>
+			<p class="nov">
+				Se acabo tener que tener cincuenta cosas donde registrar nuestro
+				contenido multimedia.
+			</p>
+			<button class="vercalendario"
+				><a href="">Ver calendario de novedades</a></button
+			>
+		</div>
 	</div>
 </div>
 
@@ -64,38 +67,61 @@ const elementoAleatorio = arrayImagenes[indiceImagenes];
 	}
 	.empezar {
 		background-color: #0b4359;
-		border-radius: 5%;
+		/* border-radius: 5%; */
+		margin-bottom: 3rem;
 	}
 	.empezar a {
 		color: white;
 		font-size: 3rem;
 	}
 
-	span{
-		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	span {
+		font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 	}
 
 	.nov {
 		font-size: 2rem;
-		text-align: center;
 	}
-	.container {
+	.novale {
+		font-size: 2rem;
+		text-align: center;
+		/* padding: 30px; */
+	}
+	.nov-container {
 		display: flex;
-		/* gap: 20px; */
+		justify-content: center;
+		gap: 10px;
 		align-items: center;
+		text-align: center;
 		max-width: 900px;
 		margin: auto;
+		margin-bottom: 2rem;
 		padding: 20px;
 		border-radius: 10px;
 		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-		margin-bottom: 50px;
+		margin-bottom: 50p;
+		background-color: rgba(241, 241, 241, 0.862);
 	}
 	img {
-		width: 250px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+		max-width: 250px;
 		height: auto;
 		border-radius: 10px;
 	}
-
+	button {
+		padding-left: 4px;
+	}
+	.vercalendario {
+		background-color: #0b4359;
+	}
+	.vercalendario a {
+		color: white;
+		font-size: 2rem;
+	}
+	.vercalendario a:hover {
+		color: #06ADBF;
+		font-size: 2rem;
+	}
 	.empezar a:hover {
 		color: black;
 	}
