@@ -1,7 +1,83 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+const categorias = ["Libros", "Peliculas", "Series", "Videojuegos"];
+
+// const botones = document.querySelectorAll(".categoria-btn");
+// const contenidoCalendario = document.getElementById("contenido-cal");
+
 ---
 
+<!-- TODO: ESTE HEADER CAMBIA SEGUN EL USUARIO -->
+<Header />
 <Layout title="Novedades">
-    
+    <ul>
+        <li class="texto"><h1>COMUNIDAD</h1></li>
+        <li class="icono"><img src="/zoom.svg" alt="" /></li>
+    </ul>
+
+    <div class="calendario">
+        <h4>Descubre las novedades</h4>
+        <ul class="categorias">
+            {categorias.map((categoria) => (
+                <li><button class="categoria-btn" data-categoria={categoria}></button></li>
+            ))}
+        </ul>
+        <div id="contenido-calendario" class="grid-clanedario">
+            
+        </div>
+    </div>
 </Layout>
+<Footer />
+
+<style>
+    * {
+        list-style: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .texto {
+        font-weight: bold;
+        color: #d90da2;
+    }
+
+    .icono {
+        cursor: pointer;
+    }
+    .icono img:hover {
+        transform: scale(1.1);
+    }
+    .categorias {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .categoria-btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .categoria-btn.activo {
+        background-color: #D90DA2;
+        color: white;
+    }
+    
+    .grid-calendario {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+</style>
