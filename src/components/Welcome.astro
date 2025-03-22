@@ -1,0 +1,106 @@
+---
+const arrayTexto = ["Libros", "Videojuegos", "Peliculas", "Series"];
+const indiceAleatrio = Math.floor(Math.random() * arrayTexto.length);
+const pbAleatorio = arrayTexto[indiceAleatrio];
+
+const arrayImagenes = [
+	{
+		texto: "LIBROS",
+		imagen: "https://i.pinimg.com/736x/40/ff/e9/40ffe966a442b3d5712b0178afcc16ad.jpg",
+	},
+	{
+		texto: "VIDEOJUEGOS",
+		imagen: "https://i.pinimg.com/736x/84/a0/a0/84a0a065c010b68fe81aadd440ee7c64.jpg",
+	},
+	{
+		texto: "PELICULAS",
+		imagen: "https://i.pinimg.com/736x/3c/78/d9/3c78d94682e6acdf4819750061901e12.jpg",
+	},
+	{
+		texto: "SERIES",
+		imagen: "https://i.pinimg.com/736x/9f/2c/a3/9f2ca32b08d080d98768b3785b824a5b.jpg",
+	},
+];
+
+const indiceImagenes = Math.floor(Math.random() * arrayImagenes.length);
+const elementoAleatorio = arrayImagenes[indiceImagenes];
+---
+
+<div class="ca">
+	<p>En este espacio podras organizar tu contenido multimedia</p>
+	<button class="empezar"><a href="">EMPEZAR AHORA</a></button>
+</div>
+
+<div class="centro">
+	<img src="" alt="" />
+
+	<div class="container">
+		<img
+			class="img1"
+			src={elementoAleatorio.imagen}
+			alt={elementoAleatorio.texto}
+		/>
+
+		<p class="nov">Descubre las nuevas novedades de: 
+			<span>{pbAleatorio}</span>
+		</p>
+		<p class="nov">
+			Se acabo tener que tener cincuenta cosas donde registrar nuestro
+			contenido multimedia.
+		</p>
+	</div>
+</div>
+
+<!-- TODO ESTILOS -->
+<style>
+	* {
+		text-decoration: none;
+	}
+	.ca {
+		text-align: center;
+		font-size: 3rem;
+		padding: auto;
+		margin: auto;
+	}
+	.empezar {
+		background-color: #0b4359;
+		border-radius: 5%;
+	}
+	.empezar a {
+		color: white;
+		font-size: 3rem;
+	}
+
+	span{
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+
+	.nov {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.container {
+		display: flex;
+		/* gap: 20px; */
+		align-items: center;
+		max-width: 900px;
+		margin: auto;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+		margin-bottom: 50px;
+	}
+	img {
+		width: 250px;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.empezar a:hover {
+		color: black;
+	}
+
+	.centro {
+		align-items: center;
+	}
+</style>
