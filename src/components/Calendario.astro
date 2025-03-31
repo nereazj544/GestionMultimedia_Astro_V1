@@ -7,7 +7,6 @@ const categorias = ["Libros", "Peliculas", "Series", "Videojuegos"];
 
 // const botones = document.querySelectorAll(".categoria-btn");
 // const contenidoCalendario = document.getElementById("contenido-cal");
-
 ---
 
 <!-- TODO: ESTE HEADER CAMBIA SEGUN EL USUARIO -->
@@ -15,20 +14,27 @@ const categorias = ["Libros", "Peliculas", "Series", "Videojuegos"];
 <Layout title="Novedades">
     <ul>
         <li class="texto"><h1>COMUNIDAD</h1></li>
-        <li class="icono"><img src="/zoom.svg" alt="" /></li>
+        <div class="form">
+            <div class="search-container">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                    <g>
+                        <path
+                            d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                        ></path>
+                    </g>
+                </svg>
+                <input
+                    class="input"
+                    placeholder="Buscar aqui"
+                    required=""
+                    type="text"
+                />
+                <span class="input-border"></span>
+            </div>
+        </div>
     </ul>
 
-    <div class="calendario">
-        <h4>Descubre las novedades</h4>
-        <ul class="categorias">
-            {categorias.map((categoria) => (
-                <li><button class="categoria-btn" data-categoria={categoria}></button></li>
-            ))}
-        </ul>
-        <div id="contenido-calendario" class="grid-clanedario">
-            
-        </div>
-    </div>
+   <h1>DUDAS & BLOGS</h1>
 </Layout>
 <Footer />
 
@@ -37,6 +43,74 @@ const categorias = ["Libros", "Peliculas", "Series", "Videojuegos"];
         list-style: none;
     }
 
+    /*TODO:  buscador*/
+
+    /* From Uiverse.io by satyamchaudharydev */
+    .form {
+        --width-of-input: 200px;
+        --border-height: 1px;
+        --border-before-color: rgba(221, 221, 221, 0.39);
+        --border-after-color: #5891ff;
+        --input-hovered-color: #4985e01f;
+        position: relative;
+        width: var(--width-of-input);
+    }
+    /* styling of Input */
+    .input {
+        color: #000000;
+        font-size: 0.9rem;
+        background-color: transparent;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 35px;
+        padding-inline: 0.5em;
+        padding-block: 0.7em;
+        border: none;
+        border-bottom: var(--border-height) solid var(--border-before-color);
+    }
+    /* styling of animated border */
+    .input-border {
+        position: absolute;
+        background: var(--border-after-color);
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+    /* Hover on Input */
+    input:hover {
+        background: var(--input-hovered-color);
+    }
+
+    input:focus {
+        outline: none;
+    }
+    /* here is code of animated border */
+    input:focus ~ .input-border {
+        width: 100%;
+    }
+    /* === if you want to do animated border on typing === */
+    /* remove input:focus code and uncomment below code */
+    /* input:valid ~ .input-border{
+  width: 100%;
+} */
+
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .search-icon {
+        
+        fill: #000000;
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* todo demas */
     ul {
         display: flex;
         justify-content: space-between;
@@ -60,7 +134,7 @@ const categorias = ["Libros", "Peliculas", "Series", "Videojuegos"];
         gap: 1rem;
         margin: 1rem 0;
     }
-    
+
     .categoria-btn {
         padding: 0.5rem 1rem;
         border: none;
@@ -68,12 +142,12 @@ const categorias = ["Libros", "Peliculas", "Series", "Videojuegos"];
         cursor: pointer;
         transition: all 0.3s ease;
     }
-    
+
     .categoria-btn.activo {
-        background-color: #D90DA2;
+        background-color: #d90da2;
         color: white;
     }
-    
+
     .grid-calendario {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

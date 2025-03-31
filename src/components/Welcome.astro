@@ -1,7 +1,17 @@
 ---
+import Layout from "../layouts/Layout.astro";
 const arrayTexto = ["Libros", "Videojuegos", "Peliculas", "Series"];
-const indiceAleatrio = Math.floor(Math.random() * arrayTexto.length);
-const pbAleatorio = arrayTexto[indiceAleatrio];
+// const indiceAleatrio = Math.floor(Math.random() * arrayTexto.length);
+// const pbAleatorio = arrayTexto[indiceAleatrio];
+// const categoriaDisplay = document.querySelector("arrayTexto");
+// let inidiceAleatorio = 0;
+// function updateCategoria() {
+// 	if (categoriaDisplay) {
+// 		categoriaDisplay.textContent = "[$%{arrayTexto[inidiceAleatorio]}]";
+// 		inidiceAleatorio = (inidiceAleatorio + 1) % arrayTexto.length;
+// 	}
+// }
+// setInterval(updateCategoria, 2000);
 
 const arrayImagenes = [
 	{
@@ -22,37 +32,83 @@ const arrayImagenes = [
 	},
 ];
 
-const indiceImagenes = Math.floor(Math.random() * arrayImagenes.length);
-const elementoAleatorio = arrayImagenes[indiceImagenes];
+const indiceImagen = Math.floor(Math.random() * arrayImagenes.length);
+const elementoAleatorio = arrayImagenes[indiceImagen];
 ---
 
-<div class="ca">
-	<p>En este espacio podras organizar tu contenido multimedia</p>
-	<button class="empezar"><a href="">EMPEZAR AHORA</a></button>
-</div>
+<Layout>
+	<div class="ca">
+		<p>En este espacio podras organizar tu contenido multimedia</p>
+		<button class="empezar"
+			><a href="/IniciarSesion">EMPEZAR AHORA</a></button
+		>
+	</div>
 
-<div class="centro">
-	<div class="nov-container">
-		<img
-			class="img1"
-			src={elementoAleatorio.imagen}
-			alt={elementoAleatorio.texto}
-		/>
-		<div class="textoNov">
-			<p class="novale">
-				Descubre las nuevas novedades de:
-				<span>{pbAleatorio}</span>
-			</p>
-			<p class="nov">
-				Se acabo tener que tener cincuenta cosas donde registrar nuestro
-				contenido multimedia.
-			</p>
-			<button class="vercalendario"
-				><a href="/Novedades">Ver calendario de novedades</a></button
-			>
+	<div class="centro">
+		<div class="nov-container">
+			<img
+				id="categoriaImagen"
+				src={elementoAleatorio.imagen}
+				alt={elementoAleatorio.texto}
+				class="img1"
+			/>
+			<div class="textoNov">
+				<p class="novale">
+					Descubre las nuevas novedades de:
+					<span id="categoriaTexto">{elementoAleatorio.texto}</span>
+				</p>
+				<p class="nov">
+					Se acabo tener que tener cincuenta cosas donde registrar
+					nuestro contenido multimedia.
+				</p>
+				<button class="vercalendario"
+					><a href="/Novedades">Ver comunidad</a
+					></button
+				>
+			</div>
 		</div>
 	</div>
-</div>
+
+	<!-- TODO SCRITP -->
+	<script>
+		let indiceActual = 0;
+		const textoElement = document.getElementById("categoriaTexto");
+		const imagenElement = document.getElementById("categoriaImagen");
+		const arrayImagenes = [
+			{
+				texto: "LIBROS",
+				imagen: "https://i.pinimg.com/736x/40/ff/e9/40ffe966a442b3d5712b0178afcc16ad.jpg",
+			},
+			{
+				texto: "VIDEOJUEGOS",
+				imagen: "https://i.pinimg.com/736x/84/a0/a0/84a0a065c010b68fe81aadd440ee7c64.jpg",
+			},
+			{
+				texto: "PELICULAS",
+				imagen: "https://i.pinimg.com/736x/3c/78/d9/3c78d94682e6acdf4819750061901e12.jpg",
+			},
+			{
+				texto: "SERIES",
+				imagen: "https://i.pinimg.com/736x/9f/2c/a3/9f2ca32b08d080d98768b3785b824a5b.jpg",
+			},
+		];
+
+		function actualizarCategoria() {
+			indiceActual = (indiceActual + 1) % arrayImagenes.length;
+			const elemento = arrayImagenes[indiceActual];
+
+			if (textoElement) {
+				textoElement.textContent = elemento.texto;
+			}
+			if (imagenElement) {
+				imagenElement.src = elemento.imagen;
+				imagenElement.alt = elemento.texto;
+			}
+		}
+
+		setInterval(actualizarCategoria, 2000);
+	</script>
+</Layout>
 
 <!-- TODO ESTILOS -->
 <style>
@@ -119,7 +175,7 @@ const elementoAleatorio = arrayImagenes[indiceImagenes];
 		font-size: 2rem;
 	}
 	.vercalendario a:hover {
-		color: #06ADBF;
+		color: #06adbf;
 		font-size: 2rem;
 	}
 	.empezar a:hover {

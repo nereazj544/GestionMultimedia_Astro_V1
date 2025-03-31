@@ -1,48 +1,88 @@
-# Astro Starter Kit: Basics
+<p align="center">
+    <img src="logo.png" alt="logo_Gestion_Multimedia">
+</p>
 
-```sh
-npm create astro@latest -- --template basics
-```
+<br>
+<p align="center">
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+</p>
+<br>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<br>
+<p align="center" font-size="30px">
+「  🦁 ; こんにちは ⲇ ⲉ⳽ⲧⲉ ⲃⳑⲟⳋ 」
+</p>
+<br>
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<br>
+<p align="center">
+☆゜・。。・゜゜・。。・゜★・。。・゜゜・。。・ ☆゜・。。・゜゜・。。・゜★ ・。。・゜゜・。。・ ☆゜・。。・゜゜・。。・゜★・。。・゜゜・。。・ ☆゜・。。・゜゜・。。・゜★
+</p>
+<br>
 
-## 🚀 Project Structure
+### TABLA DE CONETIDOS
+<details>
 
-Inside of your Astro project, you'll see the following folders and files:
+1. [📌 Descripcion General](#-descripción-general)
+2. [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
+3. [⚙️ Instalación](#️-instalación)
+    - [💻 Lista de comandos](#-ˏˋ--lista-de-comandos-ˊˎ-)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+</details>
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+<br>
+<p align="center">
+☆゜・。。・゜゜・。。・゜★・。。・゜゜・。。・ ☆゜・。。・゜゜・。。・゜★ ・。。・゜゜・。。・ ☆゜・。。・゜゜・。。・゜★・。。・゜゜・。。・ ☆゜・。。・゜゜・。。・゜★
+</p>
+<br>
 
-## 🧞 Commands
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/7f/6d/95/7f6d95a485791f905b5c94e31054d460.jpg" >
+</p>
+<br>
+<br>
 
-All commands are run from the root of the project, from a terminal:
+# 📌 Descripción General
 
-| Command                   | Action                                           |
+Este proyecto ha sido diseñado p
+
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/aa/55/41/aa5541d265687d1fb50d15e6088013d6.jpg" >
+</p>
+<br>
+
+# 🛠️ Tecnologías Utilizadas
+
+
+
+<br>
+<br>
+
+<p align="center">
+<img  height="90px" width="100%" src="https://i.pinimg.com/736x/35/cd/54/35cd544a8b4bde382edafa48c8c7795f.jpg" alt="separador1">
+</p>
+<br>
+
+# ⚙️ Instalación
+
+<br>
+<p align="center">
+<img  height="90px" width="100%"   src="https://i.pinimg.com/736x/ff/18/08/ff180896bf024353d41301ca2e623603.jpg" alt="separador1">
+</p>
+<br>
+
+<br>
+
+##  -ˏˋ 💻 Lista de comandos ˊˎ-
+Todos los comandos se ejacutan desde la raiz del proyecto, desde una terminal:
+
+| Comandos                  | Acciones                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| `npm install`             | Instalar dependencias                            |
+| `npm install`             |                                                  |
+| `npm install`             |  |

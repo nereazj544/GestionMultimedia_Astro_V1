@@ -28,6 +28,8 @@ export async function getStaticPaths() {
   return [
     { params: { path: 'Home' } },
     { params: { path: 'Novedades' } },
+    { params: { path: 'IniciarSesion' } },
+    { params: { path: 'Registrarse' } },
   ];
 }
 
@@ -42,6 +44,12 @@ switch (path) {
     break;
   case 'Novedades':
     PComponent = (await import('../components/Calendario.astro')).default;
+    break;
+  case 'IniciarSesion':
+    PComponent = (await import('../auth/IniciarSesion.astro')).default;
+    break;
+  case 'Registrarse':
+    PComponent = (await import('../auth/Registro.astro')).default;
     break;
   default:
     // Si el path no coincide con los definidos, lanza un error
